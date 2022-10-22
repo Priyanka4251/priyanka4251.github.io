@@ -231,9 +231,15 @@
         font-size: 12px;
         width: 400px;
     }
+    #right>ul>li>a{
+   padding: 10px;
+   margin-right: 0px;
+
+  }
 #Pprojects{
     display: block;
 }
+
 #Pprojects{
     display: flex;
     flex-direction: column;
@@ -280,6 +286,9 @@
     font-size: 12px;
    }
    #p{
+    display: none;
+   }
+   #image{
     display: none;
    }
 }
@@ -413,6 +422,10 @@
         document.querySelector("hr").style.display="none";
         document.getElementById("projectHeading").style.display="none";
         
+        document.getElementById("Pprojects").style.display="none";
+
+        document.getElementById("contactsDiv").style.display="none";
+        document.getElementById("footer").style.display="none";
 
     })
     document.getElementById("About").addEventListener("mouseout", function(){
