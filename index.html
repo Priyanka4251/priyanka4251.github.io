@@ -33,7 +33,10 @@
    
   
    }
-  
+  #contactsDiv{
+    display: flex;
+    justify-content: space-around;
+  }
 
    #right>ul{
     width: 30%;
@@ -278,9 +281,12 @@
     margin: auto;
 }
 #navbar{
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
    flex-direction: column;
+ 
    }
    #right{
     font-size: 12px;
@@ -290,6 +296,10 @@
    }
    #image{
     display: none;
+   }
+   #right{
+    
+
    }
 }
 </Style>
@@ -390,7 +400,7 @@
 
 
 
-<div id="contactsDiv"  style="display: flex; justify-content: space-around; width: 90vw; margin: auto;margin-top: 50px; margin-bottom: 50px;">
+<div id="contactsDiv"  style="width: 90vw; margin: auto;margin-top: 50px; margin-bottom: 50px;">
     <div id="mail" style="width: 22%; border-radius: 70%; border: 2px solid white;display: flex; justify-content: center; align-items: center; background-color: rgb(226, 103, 103); " > <a href = "mailto: pdhar4251@gmail.com" style="display: flex; justify-content: center; align-items: center;">
        <img src="https://cdn.pixabay.com/photo/2019/10/19/17/24/gmail-4561841_960_720.png" alt="" style="width:80%; " > </a>
     </div>
@@ -436,6 +446,8 @@
         document.getElementById("image").style.display="block";
         document.querySelector("hr").style.display="block";
         document.getElementById("projectHeading").style.display="block";
+        document.getElementById("contactsDiv").style.display="block";
+        document.getElementById("footer").style.display="block";
     })
     // ------------------------contacts-------------------------------------
 // document.getElementById("mail").addEventListener("click", function(){
@@ -451,7 +463,7 @@ function projectFun(event){
 }
 function contactFun(event){
     event.preventDefault();
-    window.scrollBy(0,1200);
+    window.scrollBy(0,1400);
 }
 
 // -----------------------------project--------------------------------
