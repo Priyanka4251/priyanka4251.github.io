@@ -30,7 +30,10 @@
    #navbar{
     display: flex;
     justify-content: space-between;
+   
+  
    }
+  
 
    #right>ul{
     width: 30%;
@@ -128,7 +131,7 @@
    display: flex;
    justify-content: space-between;
    margin-top: 50px;
-   /* display: none; */
+  
 }
 #p_box1{
     width: 40%;
@@ -162,7 +165,10 @@
 #p_box11>img:hover{
     box-shadow: rgba(246, 244, 244, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;   cursor: pointer;
 }
-
+/* -------------------------------------------------------- */
+#Pprojects{
+    display: none;
+}
 /* --------------------------------contacts---------------------------- */
 #contacts{
     width: 80px;position: absolute; margin-top: 8px; background-color:rgb(226, 103, 103);height: 50px; border-bottom: 2px solid white;text-align: center; margin-left: 40px;
@@ -216,14 +222,75 @@
     width: 80px;position: absolute; margin-top: 8px; background-color:rgb(226, 103, 103);height: 50px; border-bottom: 2px solid white;text-align: center; margin-left: 10px;
   }
 }
+@media screen and (max-width: 432px) {
+    body{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    #heading{
+        font-size: 12px;
+        width: 400px;
+    }
+#Pprojects{
+    display: block;
+}
+#Pprojects{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    text-align: center;
+    margin: auto;
+}
+#pbox1{
+    text-align: center;
+    margin: auto;
+}
+
+#pimgbox1>img{
+    width: 80%;
+    margin: auto;
+}
+#ppara1{
+    width: 90%;
+    color: white;
+    margin-bottom: 50px;
+    margin: auto;
+}
+#pbox2{
+    text-align: center;
+    margin: auto;
+}
+
+#pimgbox2>img{
+    width: 80%;
+    margin: auto;
+}
+#ppara2{
+    width: 90%;
+    color: white;
+    margin-bottom: 50px;
+    margin: auto;
+}
+#navbar{
+    display: flex;
+    justify-content: space-between;
+   flex-direction: column;
+   }
+   #right{
+    font-size: 12px;
+   }
+   #p{
+    display: none;
+   }
+}
 </Style>
 <body>
-    <div id="navbar">
+    <div id="navbar" style="position: sticky; top: 0; background-color: black;">
       <div id="left">
         <h1 style="color: white; padding: 10px">Port<span style="color: rgb(226, 103, 103); ";>folio</span> </h1>
 
-        <div class="typing"></div>
-        <div class="typing2"></div>
+        <!-- <div class="typing"></div>
+        <div class="typing2"></div> -->
       </div>
 
       <div id="right">
@@ -237,7 +304,8 @@
         </a> </li>
         <li><a id="Projects" href="" onclick="projectFun(event)">Projects </a></li>
         <li onclick="contactFun(event)"><a href="" id="Contacts">Contact</a></li>
-        <li><a href="">Resume</a></li>
+        <li><a href="https://drive.google.com/file/d/1r9gpsyA0jP8Dei3mB4bt5oshFSqm76J6/view?usp=sharing
+            ">Resume</a></li>
       </ul></div>
     </div>
 
@@ -287,6 +355,26 @@
         </div>
     </div>
 </div>
+<!-- --------------------------------------------------------------------- -->
+<div id="Pprojects">
+    <div id="pbox1">
+        <div id="pimgbox1"><img src="./bluemercury.jpeg" alt=""></div>
+        <div id="ppara1">
+            <p>Tech stack used: HTML, CSS, Java Script, Json server
+               Import and export header, footer including animation to
+            all pages and handled the product details page.</p>
+        </div>
+    </div>
+    <div id="pbox2">
+        <div id="pimgbox2"><img src="./jiomart.jpeg" alt=""></div>
+        <div id="ppara2">
+            <p>Tech stack used: HTML, CSS, Java Script, Json server
+            Role: Implemented the back-end and created RestAPIs.
+           
+        </div>
+    </div>
+</div>
+
 <!-- ----------------------------Contact------------------------------ -->
 <hr>
 <div id="projectHeading" style="margine: auto; width: 100vw;text-align: center; color: white;"><h3 style="font-size: 28px;">Contacts</h3></div>
@@ -318,8 +406,8 @@
 
     document.getElementById("About").addEventListener("mouseover", function(){
         document.getElementById("about").style.display="block";
-                document.querySelector(".typing").style.display="none";
-        document.querySelector(".typing2").style.display="none";
+        //         document.querySelector(".typing").style.display="none";
+        // document.querySelector(".typing2").style.display="none";
         document.getElementById("h1heading").style.display="none";
         document.getElementById("image").style.display="none";
         document.querySelector("hr").style.display="none";
@@ -329,8 +417,8 @@
     })
     document.getElementById("About").addEventListener("mouseout", function(){
         document.getElementById("about").style.display="none";
-        document.querySelector(".typing").style.display="block";
-        document.querySelector(".typing2").style.display="block";
+        // document.querySelector(".typing").style.display="block";
+        // document.querySelector(".typing2").style.display="block";
         document.getElementById("h1heading").style.display="block";
         document.getElementById("image").style.display="block";
         document.querySelector("hr").style.display="block";
