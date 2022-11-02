@@ -3,482 +3,597 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/74f19205b6.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="./profile photo.jpeg" type="image/x-icon">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <title>Portfolio</title>
 </head>
-<Style>
+<style>
+    /*color: rgb(241, 124, 124); */
+    /* rgb(48, 45, 45); */
     *{
-       margin: 0;
-       padding: 0;
-       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 0;
+        padding: 0;
     }
     body{
-        background-color: black;
-        width: 100vw;
-        /* height: 100vh; */
+        width: 100%;
         overflow-x: hidden;
-        /* margin-left: 20px; */
-        /* text-align: center; */
-       
+        background-color:  black;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+        margin: auto;
     }
-   #navbar{
-    display: flex;
-    justify-content: space-between;
-   
-  
-   }
-  #contactsDiv{
-    display: flex;
-    justify-content: space-around;
-  }
-
-   #right>ul{
-    width: 30%;
-    display: flex;
-    margin-top: 15px;
-    /* justify-content: space-around; */
-   }
-   li{
-    list-style: none;
-   }
-   #right>ul>li>a{
-   padding: 40px;
-   font-size: 20px;
-   color: rgb(226, 103, 103);
-   text-decoration: none;
-   }
-   #right>ul>li>a:hover{
-    color: white;
-
-   }
-   #heading>h1{
-    width: 500px;
-   }
-   /* /////////////////////////////////container///////////////////////////// */
-   #container{
-    width: 100vw;
-    margin-top: 10%;
-    width:40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-end;
-   }
-   #container>h1{
-    color: white;
-   }
-   #containerBox1{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    /* margin-left: 200px; */
-   }
-   #image>img{
-    margin-left: 300px;
-    margin-top: -50px;
-    
-   }
-   /* ---------------typing----------------------------------- */
-   #left>.typing{
-    width: 400px;
-    height: 40px;
-    border-left: 2px solid rgb(226, 103, 103);
-    background-color: black;
-    position: absolute;
-    margin-top: 125px;
-    margin-left: 150px;
-    animation-name: ani1;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-   }
-   #left>.typing2{
-    width: 400px;
-    height: 40px;
-    border-left: 2px solid rgb(226, 103, 103);
-    background-color: black;
-    position: absolute;
-    margin-top: 165px;
-    margin-left: -100px;
-    animation-name: ani2;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
-   }
-   @keyframes ani1{
-    0%{
-        margin-left: 150px;
+    #navbar{
+        width: 100%;
+        height: 60px;
+        background-color: rgb(48, 45, 45);
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: rgb(241, 124, 124);
+       font-size: 22px;
+       font-weight: 600;
+       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
-    100%{
-        margin-left: 440px;
+    #nav{
+        width: 40%;
     }
-}
-@keyframes ani2{
-    0%{
-        margin-left: -350px;
+    #nav>ul{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 10px;
     }
-    100%{
-        margin-left: 300px;
+    #nav>ul>li{
+        list-style: none;
+        
     }
-}
-/* -------------------------projects---------------------------------- */
-#p{
-   width: 90%;
-   height: 60vh;
-   margin: auto;
-   margin-bottom: 20px;
-   display: flex;
-   justify-content: space-between;
-   margin-top: 50px;
-  
-}
-#p_box1{
-    width: 40%;
-    height: 100%;
-    border: 2px solid white;
-    background-color: rgb(226, 103, 103);
-    /* box-shadow: rgba(200, 102, 102, 0.35) 0px 5px 15px; */
-}
-#p_box2{
-    width: 40%;
-    height: 100%;
-    border: 2px solid white;
-    background-color: rgb(226, 103, 103);
-    /* box-shadow: rgba(200, 102, 102, 0.35) 0px 5px 15px; */
-}
-#p_box11>img{
-    width: 100%;
-    height: 45%;
-}
-#p_box12>p{
-    width: 100%;
-    height: 45%;
-}
-#p_box12>p>p{
-    width: 100%;
-    /* height: 1000px; */
-}
-#p_box12>p{
-   margin-top: 5px;
-}
-#p_box11>img:hover{
-    box-shadow: rgba(246, 244, 244, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;   cursor: pointer;
-}
-/* -------------------------------------------------------- */
-#Pprojects{
-    display: none;
-}
-/* --------------------------------contacts---------------------------- */
-#contacts{
-    width: 80px;position: absolute; margin-top: 8px; background-color:rgb(226, 103, 103);height: 50px; border-bottom: 2px solid white;text-align: center; margin-left: 40px;
-    display: none;
-}
-#contacts>li>a{
-    text-decoration: none;
-    color: white;
-    margin-top: 5px;
-   
-}
-/* -------------------------------About-------------------------------- */
-#about{
-    display: none;
-    position: absolute;
-    margin-left: -40vw;
-    margin-top: 30vh;
-    animation-name: ani3;
-
-}
-/* --------------------------------contacts----------------------------- */
-
-
-@keyframes ani3{
-    0%{
-        margin-left: -350px;
-    }
-    100%{
+    #logo{
         margin-left: 10px;
     }
-}
-
-   /* -------------------------------responsiveness------------------- */
-   @media screen and (max-width: 800px) {
-    body{
-    width: 100vw;
-  }
-  #container>h1{
-    font-size: 24px;
-  }
-  #container{
-    margin-top: 20%;
-    width: 70%;
-  }
-  #right>ul>li>a{
-   padding: 10px;
-   margin-right: 5px;
-
-  }
-  #contacts{
-    width: 80px;position: absolute; margin-top: 8px; background-color:rgb(226, 103, 103);height: 50px; border-bottom: 2px solid white;text-align: center; margin-left: 10px;
-  }
-}
-@media screen and (max-width: 432px) {
-    body{
-        width: 100vw;
-        overflow-x: hidden;
+    .logoSpan{
+        color: white;
+        margin-right: -4px;
+        font-size: 26px;
     }
-    #heading{
-        font-size: 12px;
-        width: 400px;
+    #navShort{
+        margin-right: 10px;
+        display: none;
     }
-    #right>ul>li>a{
-   padding: 10px;
-   margin-right: 0px;
-
-  }
-#Pprojects{
-    display: block;
-}
-
-#Pprojects{
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    text-align: center;
-    margin: auto;
-}
-#pbox1{
-    text-align: center;
-    margin: auto;
-}
-
-#pimgbox1>img{
-    width: 80%;
-    margin: auto;
-}
-#ppara1{
-    width: 90%;
-    color: white;
-    margin-bottom: 50px;
-    margin: auto;
-}
-#pbox2{
-    text-align: center;
-    margin: auto;
-}
-
-#pimgbox2>img{
-    width: 80%;
-    margin: auto;
-}
-#ppara2{
-    width: 90%;
-    color: white;
-    margin-bottom: 50px;
-    margin: auto;
-}
-#navbar{
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-   flex-direction: column;
- 
-   }
-   #right{
-    font-size: 12px;
-   }
-   #p{
-    display: none;
-   }
-   #image{
-    display: none;
-   }
-   #right{
-    
-
-   }
-}
-</Style>
-<body>
-    <div id="navbar" style="position: sticky; top: 0; background-color: black;">
-      <div id="left">
-        <h1 style="color: white; padding: 10px">Port<span style="color: rgb(226, 103, 103); ";>folio</span> </h1>
-
-        <!-- <div class="typing"></div>
-        <div class="typing2"></div> -->
-      </div>
-
-      <div id="right">
-        <ul>
-        <li><a href="">Home</a> </li>
-        <li><a href="" id="About" >About
-            <h3 id="about" style="text-align: left; margin-left: -250px;" data-aos="fade-down">As a Java backend developer with some hands-on experience, optimistic
-                about teamwork and online collaboration as well as having similar
-                experiences, pressures never broke me down instead it was always an
-                opportunity for me.</h3>
-        </a> </li>
-        <li><a id="Projects" href="" onclick="projectFun(event)">Projects </a></li>
-        <li onclick="contactFun(event)"><a href="" id="Contacts">Contact</a></li>
-        <li><a href="https://drive.google.com/file/d/1r9gpsyA0jP8Dei3mB4bt5oshFSqm76J6/view?usp=sharing
-            ">Resume</a></li>
-      </ul></div>
-    </div>
-
-    <div id="container">
-        <div id="containerBox1">
-
-            <div id="heading">
-        <h1 id="h1heading" style="color: white;">Hi, This is <span style="color: rgb(226, 103, 103);">Priyanka Dhar, Java backend developer...</span></h1></div>
-
-        <div id="image" data-aos="fade-out"  >
-            <img src="./profile photo-removebg-preview.jpg" alt="" style="width: 500px;" >
-        </div>
-
-    </div>
-    </div>
-    <!-- --------------------corousel-------------------------------- -->
-    
-<!-- ------------------------Projects----------------------------- -->
-<hr>
-<div id="projectHeading" style="margine: auto; width: 100vw;text-align: center; color: white;"><h3 style="font-size: 28px;">Projects</h3></div>
-<div id="p">
-    <div id="p_box1" data-aos="fade-left">
-        <div id="p_box11" >
-            <img src="./bluemercury.jpeg" alt="" style="height: 220px;">
-        </div>
-        <div id="p_box12">
-            <p style="color: white;"><span style="font-weight: 800;">Tech stack used:</span> HTML, CSS, Java Script, Json server</p>
-                <p style="color: white; height: 72px;"> <span style="font-weight: 800;">Role:</span>  Import and export header, footer including animation to
-                all pages and handled the product details page.</p>
-        </div>
-        <div id="play" style="width: 100%; text-align: center;" onclick="bluemercuryFun()"> <a href="https://candid-jalebi-5c594f.netlify.app/">
-            <i class="fa-regular fa-circle-play" style="color: white; font-size: 38px;"></i></a>
-        </div>
+    #navShort>i{
+       color: white;
+    }
+    #navShort:hover{
+      cursor: pointer;
+    }
+    /* -------------------------------sidebar---------------------------- */
+    #sidebar{
+        position: absolute;
+        width: 40%;
+        height: 1300px;
+        text-align: center;
+        overflow-y: hidden;
+        background-color:  rgba(0, 0, 0, 0.325);
+        z-index: 100;
+       display: none;
+    }
+    #sidebar>ul{
+        margin-top: 680px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+       
+    }
+    #sidebar>ul>li{
+        color: white;
+        padding-top:20px ;
+        padding-bottom: 30px;
+    }
+    #sidebar>ul>li:hover{
+        cursor: pointer;
+    }
+    #cross{
+        color: white;
+        position: absolute;
+        left: 80%;
+     
+    }
+    /* ------------------------------1st section------------------------------ */
+    #cont1{
+        margin-top: 35px;
+        width: 100%;
+        height: 510px;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    #cont1box2{
+        width: 50%;
+    }
+    #cont1box2>img{
+       width: 100%;
+       height: 100%;
+    }
+    #cont1box1{
+        width: 45%;
+        height: 60%;
+       text-align: center;
+       margin-top: 150px;
       
+    }
+    #cont1box1>h1{
+        font-size: 32px;
+        color: rgb(241, 124, 124);
+       
+    }
+    #cv{
+        background-color: rgb(241, 124, 124);
+        padding: 8px;
+        color: white;
+       position: absolute;
+       margin-top: -240px;
+       margin-left: -280px;
+       z-index: 10;
+    }
+    #cv>a{
+        text-decoration: none;
+        color: white;
+        font-weight: 800;
+    }
+    /* ---------------------------About------------------------------------- */
+    #about{
+        text-align: center;
+        color: white;
+        margin-top: 40px;
+        margin-bottom: 40px;
+       
+    }
+    #cont2{
+        text-align: center;
+        margin: auto;
+        /* padding: 2%; */
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,46%);
+        
+        gap: 25px;
+    }
+    /* #cont2box1{
+        width: 45%;
+    } */
+    #cont2box1>iframe{
+        width: 100%;
+    }
+    #cont2box2{
+        /* width: 45%; */
+        text-align: left;
+        margin-top: 20px;
+    }
+    #cont2box2>p{
+        width: 100%;
+        color: white;
+        font-size: 22px;
+    }
+    /* --------------------------------------skills----------------------- */
+    #skills{
+        color: white;
+        text-align: center;
+        margin: auto;
+        margin-top: 60px;
+        margin-bottom: 40px;
+        font-size: 24px;
+    }
+    #cont3{
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+    #cont3box1{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap: 100px;
+    }
+    #cont3box11{
+        width: 100%;
+
+    }
+    #cont3box11>img{
+        width: 100%;
+        height: 200px;
+    }
+    /* ---------------------------------projects------------------------------- */
+    #projects{
+        color: white;
+        font-size: 22px;
+        margin-top: 100px;
+        margin-bottom: 30px;
+    }
+    #cont4{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        margin: auto;
+    }
+    #cont4box1{
+        width: 100%;
+        margin: auto;
+    }
+    #cont4box11{
+        width: 100%;
+        margin: auto;
+    }
+    #cont4box11>img{
+        width: 98%;
+        height: 400px;
+    }
+    #cont4box12{
+        width: 100%;
+        color: white;
+        text-align: left;
+    }
+    #links>a{
+        /* text-decoration: none; */
+        color:rgb(241, 124, 124);
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding: 6px;
+        font-size: 18px;
+    }
+    /* ----------------------------------Contacts--------------------------- */
+    #cont5{
+        width: 100%;
+        height: 100px;
+        background-color:rgb(48, 45, 45);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    #cont5box1{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+       
+    }
+    #cont5box1>a{
+        color:rgb(241, 124, 124);
+        font-size: 18px;
+    }
+    /* ------------------------------------medium screen-------------------- */
+    @media screen and (max-width: 732px) {
+        #nav{
+        width: 70%;
+    }
+    #nav>ul{
+       margin-right: 30px;
+    }
+    /* -------------------------1st section------------------------ */
+    #cont1{
+        width: 100%;
+        height: 510px;
+    }
+    #cont1box2{
+        width: 50%;
+    }
+    #cont1box2>img{
+       width: 100%;
+       height: 100%;
+    }
+    #cont1box1{
+        width: 45%;
+        height: 60%;
+    }
+    #cont1box1>h1{
+        font-size: 24px;
+        color: rgb(241, 124, 124);
+       
+    }
+    /* --------------------------------About-------------------------------- */
+    #cont2{
+        /* padding: 2%; */
+        display: grid;
+        grid-template-columns: repeat(1,96%);
+        gap: 20px;
+    }
+    #cont2box2>p{
+        font-size: 20px;
+    }
+    /* ----------------------------skills---------------------------------- */
+    #cont3box1{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3,1fr);
+        gap: 50px;
+    }
+    }
+    /* --------------------------------small size------------------------------ */
+    @media screen and (max-width: 432px) {
+        body{
+            width: 100vw;
+            overflow-x:hidden;
+        }
+        #navbar{
+            
+        }
+        #nav{
+       display: none;
+    }
+    #navShort{
+        display: block;
+    }
+    /* --------------------------1st section------------------------------- */
+    #cv{
+        margin-left: -160px;
+    }
+    #cont1{
+        margin-bottom: 80px;
+    }
+    #cont1box2>img{
+        margin-top: 60px;
+    }
+    #cont1box1{
+        margin-left: 5px;
+    }
+    #cont1box1>h1{
+        font-size: 18px;
+        text-align: left;
+    }
+    
+/* -------------------------------About----------------------------------- */
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+#about{
+    margin-bottom: 5px;
+}
+#cont2{
+        /* padding: 5%; */
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,95%);
+        gap: 10px;
+    }
+    #cont2box1{
+        width: 100%;
+    }
+    #cont2box1>iframe{
+        width: 100%;
+    }
+    #cont2box2>p{
+        font-size: 20px;
+    }
+    /*-----------------------------skills----------------------------------  */
+    #cont3box1{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4,1fr);
+        gap: 50px;
+    }
+    /* -------------------------------------Projects-------------------- */
+    #cont4{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap: 50px;
+        margin: auto;
+    }
+    /* -------------------------------contacts--------------------------- */
+    #cont5box1>a{
+        color:rgb(241, 124, 124);
+        font-size: 14px;
+    }
+    }
+</style>
+<body>
+    <div id="navbar">
+        
+        <div id="logo">
+         <p> <span class="logoSpan">Port</span> folio </p>
+        </div>
+
+        <div id="nav">
+            <ul>
+                <li class="home" onclick="homeFun()">Home</li>
+                <li class="about" onclick="aboutFun()">About</li>
+                <li class="skills" onclick="skillsFun()">Skills</li>
+                <li class="projects" onclick="projectsFun()">Projects</li>
+                <li class="contact" onclick="contactFun()">Contact</li>
+            </ul>
+        </div>
+
+        <div id="navShort"><i class="fa-solid fa-bars"></i></div>
+
+        <div id="sidebar">
+          
+            <ul>
+                <div id="cross"><i class="fa-solid fa-xmark"></i></div>
+                <li class="home" onclick="homeFun()">Home</li>
+                <li class="about" onclick="aboutFun()">About</li>
+                <li class="skills" onclick="skillsFun()">Skills</li>
+                <li class="projects" onclick="projectsFun()">Projects</li>
+                <li class="contact" onclick="contactFun()">Contact</li>
+            </ul>
+        </div>
+
     </div>
-    <div id="p_box2" data-aos="fade-right">
-        <div id="p_box11">
-            <img src="./jiomart.jpeg" alt="" style="height: 220px;">
+<!-- -------------------------------------1st section---------------------- -->
+<div id="cont1" class="cont">
+    <div id="cont1box1" data-aos="fade-right">
+        <h1 >Hi, This is Priyanka Dhar</h1>
+        <h1>Java backend developer</h1>
+    </div>
+    <div id="cont1box2" data-aos="fade-left">
+        <img src="./profile photo-removebg-preview.jpg" alt="" >
+    </div>
+</div>
+<button id="cv"><a href="https://drive.google.com/file/d/17YrTYHdv9_mxMqixKqWzT5Y1O0og3UpT/view?usp=sharing">  Download CV </a></button>
+<!-- ------------------------------About------------------------------------ -->
+              <div id="about"><h2>About Me</h2></div>
+<div id="cont2" class="cont">
+    <div id="cont2box1" data-aos="fade-left">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/lz2efPEZEoU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div id="cont2box2" data-aos="fade-right">
+        <p>Hi, I am Priyanka Dhar. I belong to Bengal, and currently, I’m staying in Delhi. Talking about my education, I have completed my graduation from Asansol Engineering College in Instrumentation Engineering. From my college days, I developed a keen interest in solving problems in an arranged manner and coding allows me to do so from that time I wanted to code and end up with joining Masai in April 2022 gained knowledge, skills, and experience in making projects individually and within a team as well. Now want to be part of a company’s growth with my all skills, knowledge, and experience which I have gained till now. 
+        </p>
+    </div>
+</div>
+<!-- -----------------------------------Skills--------------------------- -->
+
+<div id="skills">
+    <h2>Skills</h2>
+</div>
+<div id="cont3" class="cont">
+    <div id="cont3box1">
+        <div id="cont3box11" data-aos="fade-right">
+            <img src="https://e7.pngegg.com/pngimages/840/443/png-clipart-html-5-logo-web-development-html-css3-canvas-element-web-design-w3c-html5-logo-miscellaneous-text-thumbnail.png" alt="">
         </div>
-        <div id="p_box12">
-            <p style="color: white;"><span style="font-weight: 800;">Tech stack used:</span> HTML, CSS, Java Script, Json server</p>
-                <p style="color: white; height: 72px;"> <span style="font-weight: 800;">Role:</span> Implemented the back-end and created RestAPIs.</p>
+        <div id="cont3box11" data-aos="fade-right">
+            <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png" alt="">
         </div>
-        <div id="play" style="width: 100%; text-align: center;">
-            <a href="https://jolly-beignet-298a1b.netlify.app">
-            <i class="fa-regular fa-circle-play" style="color: white; font-size: 38px;" onclick="jiomartFun()"></i> </a>
+        <div id="cont3box11" data-aos="fade-right">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" alt="">
+        </div>
+        <div id="cont3box11" data-aos="fade-right">
+            <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/git-logo.png" alt="">
+        </div>
+        <div id="cont3box11" data-aos="fade-left">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0W4i7PuN62eaTT7Z24CjF5pFtTtBEN_lu2A&usqp=CAU" alt="">
+        </div>
+        <div id="cont3box11" data-aos="fade-left">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/1200px-Java_programming_language_logo.svg.png" alt="">
+        </div>
+        <div id="cont3box11" data-aos="fade-left">
+            <img src="https://banner2.cleanpng.com/20180713/otv/kisspng-spring-framework-software-framework-modelview-pepper-robot-5b48c128f2f1c1.7505867115314946969951.jpg" alt="">
+        </div>
+        <div id="cont3box11" data-aos="fade-left">
+            <img src="https://cdn-images-1.medium.com/fit/c/300/300/1*P8CfLG3rsh4OTHXE8qaITg.png" alt="">
         </div>
     </div>
 </div>
-<!-- --------------------------------------------------------------------- -->
-<div id="Pprojects">
-    <div id="pbox1">
-        <div id="pimgbox1"><img src="./bluemercury.jpeg" alt=""></div>
-        <div id="ppara1">
-            <p>Tech stack used: HTML, CSS, Java Script, Json server
-               Import and export header, footer including animation to
-            all pages and handled the product details page.</p>
-        </div>
-    </div>
-    <div id="pbox2">
-        <div id="pimgbox2"><img src="./jiomart.jpeg" alt=""></div>
-        <div id="ppara2">
-            <p>Tech stack used: HTML, CSS, Java Script, Json server
-            Role: Implemented the back-end and created RestAPIs.
-           
-        </div>
-    </div>
+<!-- ----------------------------projects---------------------------------- -->
+<div id="projects">
+    <h2>Projects</h2>
 </div>
-
-<!-- ----------------------------Contact------------------------------ -->
-<hr>
-<div id="projectHeading" style="margine: auto; width: 100vw;text-align: center; color: white;"><h3 style="font-size: 28px;">Contacts</h3></div>
-
-
-
-<div id="contactsDiv"  style="width: 90vw; margin: auto;margin-top: 50px; margin-bottom: 50px;">
-    <div id="mail" style="width: 22%; border-radius: 70%; border: 2px solid white;display: flex; justify-content: center; align-items: center; background-color: rgb(226, 103, 103); " > <a href = "mailto: pdhar4251@gmail.com" style="display: flex; justify-content: center; align-items: center;">
-       <img src="https://cdn.pixabay.com/photo/2019/10/19/17/24/gmail-4561841_960_720.png" alt="" style="width:80%; " > </a>
+<div id="cont4" class="cont">
+    <div id="cont4box1" data-aos="fade-left">
+       <div id="cont4box11">
+        <img src="./bluemercury.jpeg" alt="">
+       </div>
+       <div id="cont4box12">
+        <h2>Bluemercury Clone</h2>
+        <p>An e-commerce site for beauty products</p>
+        <p>TECH-STACK USED: HTML, CSS, JS, Json server</p>
+        <p>ROLE: Import and export header, footer including animation to all
+            pages and handled the product details page.</p>
+         <div id="links">
+            <a href="https://github.com/ujjwalpaul005/materialistic-knife-835">Git hub</a>
+            <a href="https://candid-jalebi-5c594f.netlify.app/">App</a>
+            <a href="https://drive.google.com/file/d/1sb82ka-q5hiFsQV0F8u4EX46YxFLEKn_/view?usp=sharing">Presentation</a>
+         </div>   
+       </div>
     </div>
-    <div id="linkedin" style="width: 22%; border-radius: 70%; border: 2px solid white;display: flex; justify-content: center; align-items: center; background-color: rgb(226, 103, 103); ">  <a href = "https://www.linkedin.com/in/priyanka-dhar/" style="display: flex; justify-content: center; align-items: center;">
-        <img src="https://play-lh.googleusercontent.com/kMofEFLjobZy_bCuaiDogzBcUT-dz3BBbOrIEjJ-hqOabjK8ieuevGe6wlTD15QzOqw" alt="" style="width:80%; border-radius: 70%;"></a>
+
+    <div id="cont4box1" data-aos="fade-right">
+        <div id="cont4box11">
+            <img src="./jiomart.jpeg" alt="">
+           </div>
+           <div id="cont4box12">
+            <h2>Jio Mart Clone</h2>
+            <p>An e-commerce site for FMCG products</p>
+            <p>TECH-STACK USED: HTML, CSS, JS, Json server</p>
+            <p>ROLE: Implemented the back-end and created RestAPIs.</p>
+            <div id="links">
+                <a href="https://github.com/atalkrpandey/-thoughtful-advertisement-6741">Git hub</a>
+                <a href="https://jolly-beignet-298a1b.netlify.app">App</a>
+                <a href="https://drive.google.com/file/d/19D-9WFP6xd9K2i35YHOao8pyyu-I40K-/view?usp=sharing">Presentation</a>
+             </div>   
+           </div>
     </div>
-    <!-- <div id="Phone" style="width: 22%; border-radius: 70%; border: 2px solid white;display: flex; justify-content: center; align-items: center; background-color: rgb(226, 103, 103); ">
-        <img src="https://media.istockphoto.com/vectors/black-phone-icon-on-white-background-vector-illustration-vector-id1130588880?k=20&m=1130588880&s=612x612&w=0&h=9f6W2Phj0huqW-iML9nkAGxvGkAMBIZPB9fc5-1aojg=" alt="" style="width:80%;border-radius: 70%;">
-    </div> -->
-    <div id="Github" style="width: 22%; border-radius: 70%; border: 2px solid white;display: flex; justify-content: center; align-items: center; background-color: rgb(226, 103, 103); ">
-        <a href = "https://github.com/Priyanka4251" style="display: flex; justify-content: center; align-items: center;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png" alt="" style="width:80%;"></a>
-    </div>
+    
 </div>
-<div id="footer" style="width: 100vw; height: 60px; background-color: rgb(226, 103, 103); display: flex; justify-content: center; align-items: center;"><h2 style="color: white; font-size: 24px;"> Made By Priyanka Dhar</h2></div>
-<!-- -------------------------------------------------------- -->
+<!-- -------------------------------Contacts------------------------------- -->
+<div id="contacts">
+    <h2>Contacts</h2>
+</div>
+<div id="cont5" class="cont">
+   <div id="cont5box1">
+    <a href="https://www.linkedin.com/in/priyanka-dhar89/">
+        <i class="fa-brands fa-linkedin"></i> Linkedin
+    </a>
+    <a href="mailto: pdhar4251@gmail.com">
+        <i class="fa-sharp fa-solid fa-envelope"></i>Gmail
+    </a>
+    <a href="https://github.com/Priyanka4251">
+        <i class="fa-brands fa-github"></i> Github
+    </a>
+    <a href="">
+        <i class="fa-solid fa-phone"></i> +91 8103088300
+    </a>
+   </div>
+</div>
 </body>
 </html>
 
 <script>
-   
-
-    document.getElementById("About").addEventListener("mouseover", function(){
-        document.getElementById("about").style.display="block";
-        //         document.querySelector(".typing").style.display="none";
-        // document.querySelector(".typing2").style.display="none";
-        document.getElementById("h1heading").style.display="none";
-        document.getElementById("image").style.display="none";
-        document.querySelector("hr").style.display="none";
-        document.getElementById("projectHeading").style.display="none";
-        
-        document.getElementById("Pprojects").style.display="none";
-
-        document.getElementById("contactsDiv").style.display="none";
-        document.getElementById("footer").style.display="none";
-
+    let ham=document.querySelector(".fa-bars");
+    ham.addEventListener("click",function(){
+        document.getElementById("sidebar").style.display="block";
+       
     })
-    document.getElementById("About").addEventListener("mouseout", function(){
-        document.getElementById("about").style.display="none";
-        // document.querySelector(".typing").style.display="block";
-        // document.querySelector(".typing2").style.display="block";
-        document.getElementById("h1heading").style.display="block";
-        document.getElementById("image").style.display="block";
-        document.querySelector("hr").style.display="block";
-        document.getElementById("projectHeading").style.display="block";
-        document.getElementById("contactsDiv").style.display="block";
-        document.getElementById("footer").style.display="block";
+    let cross=document.querySelector(".fa-xmark");
+    cross.addEventListener("click",function(){
+        document.getElementById("sidebar").style.display="none";
+      
     })
-    // ------------------------contacts-------------------------------------
-// document.getElementById("mail").addEventListener("click", function(){
+    // ---------------------------scroll---------------------------------------//
+   let home=document.getElementById("cont1");
+   let about=document.getElementById("cont2");
+   let skills=document.getElementById("cont3");
+   let projects=document.getElementById("cont4");
+   let contact=document.getElementById("cont5");
+
+   function homeFun(){
+    home.scrollIntoView({behavior:'smooth'});
+    document.getElementById("sidebar").style.display="none";
+   }
+
+   function aboutFun(){
+    about.scrollIntoView({behavior:'smooth'});
+    document.getElementById("sidebar").style.display="none";
+   }
+
+   function contactFun(){
+    contact.scrollIntoView({behavior:'smooth'});
+    document.getElementById("sidebar").style.display="none";
+   }
+
+   function skillsFun(){
+    skills.scrollIntoView({behavior:'smooth'});
+    document.getElementById("sidebar").style.display="none";
+   }
+
+   function projectsFun(){
+    projects.scrollIntoView({behavior:'smooth'});
+    document.getElementById("sidebar").style.display="none";
+   }
   
-   
-
-// })
-// ------------------------------scroll-------------------------------------//
-
-function projectFun(event){
-    event.preventDefault();
-    window.scrollBy(0,600);
-}
-function contactFun(event){
-    event.preventDefault();
-    window.scrollBy(0,1400);
-}
-
-// -----------------------------project--------------------------------
-function bluemercuryFun(){
-    window.location.replace("https://candid-jalebi-5c594f.netlify.app/")
-}
-
 </script>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-  AOS.init({
-    offset:300,
-    duration:1000,
-  });
-
-//   $('#navbar ')
-</script>
+    AOS.init({
+      offset:300,
+      duration:1000,
+    });
+  </script>
