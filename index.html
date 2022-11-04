@@ -1,288 +1,701 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Priyanka</title>
-    <link rel="shortcut icon" href="./Image/Icon.png" type="image/x-icon" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/74f19205b6.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-    <link rel="stylesheet" href="./style/index.css" />
-
-    <link rel="stylesheet" href="style/comp.css" />
-
-    <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+    <title>Portfolio</title>
     <link
     rel="stylesheet"
     href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
     />
-  </head>
-
-  <body>
-    <div id="nav"></div>
-
-    <div id="home">
-      <div id="intro" data-aos="fade-right">
-        <p>Hi, I am Priyanka</p>
-        <p>I am a <span id="typing">Backend Developer</span></p>
-      </div>
-
-      <div id="P_img" data-aos="fade-out">
-        <img src="./Image/ProfilePic.jpg" alt="">
-      </div>
-
-
-    <div id="about">
-      <div id="image" data-aos="fade-right">
-        <!-- <img
-          src="./Image/ProfilePic.jpg"
-        /> -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/lz2efPEZEoU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-      </div>
-      <div id="detail"  data-aos="fade-left">
-        <h2>About Me</h2>
-        <p>
-          Hi, I am Priyanka Dhar. I belong to Bengal, and currently, I’m staying in Delhi. Talking about my education, I have completed my graduation from Asansol Engineering College in Instrumentation Engineering. From my college days, I developed a keen interest in solving problems in an arranged manner and coding allows me to do so from that time I wanted to code and end up with joining Masai in April 2022 gained knowledge, skills, and experience in making projects individually and within a team as well. Now want to be part of a company’s growth with my all skills, knowledge, and experience which I have gained till now.
-        </p>
-        <div class="aboutCard">
-          <p>Name: <span>Priyanka Dhar</span></p>
-          <p>
-            Email:
-            <span
-              ><a href="mailto:ujjwalpaul005@gmail.com"
-                >pdhar4251@gmail.com</a
-              ></span
-            >
-          </p>
-          <p>
-            Phone: <span><a href="tel:+919749463552">+91 8103088300</a></span>
-          </p>
-          <button>Resume</button>
-        </div>
-      </div>
-    </div>
-
-    <div id="techStack">
-      <h2>Teck Stack</h2>
-      <div class="tech" data-aos="fade-right">
-        <div>
-          <img src="./Image/java.png" />
-          <p>Java</p>
-        </div>
-        <div>
-          <img src="./Image/js.png" />
-          <p>JavaScript</p>
-        </div>
-        <div>
-          <img src="./Image/html-5.png" />
-          <p>HTML 5</p>
-        </div>
-        <div>
-          <img src="./Image/css-3.png" />
-          <p>CSS 3</p>
-        </div>
-        <div>
-          <img src="./Image/Git.png" />
-          <p>Git</p>
-        </div>
-        <div>
-          <img src="./Image/github-logo.png" />
-          <p>GitHub</p>
-        </div>
-        <div>
-          <img src="./Image/mysql.png" />
-          <p>MySQL</p>
-        </div>
-        <div>
-          <img src="./Image/spring-logo.svg" />
-          <p>SpringBoot</p>
-        </div>
-        <div>
-          <img src="./Image/aws-icon.png" />
-          <p>AWS</p>
-        </div>
+</head>
+<style>
+    /*color: rgb(241, 124, 124); */
+    /* rgb(48, 45, 45); */
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        width: 100%;
+        overflow-x: hidden;
+        background-color:  black;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+        margin: auto;
+    }
+    #navbar{
+        width: 100%;
+        height: 60px;
+        background-color: rgb(48, 45, 45);
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: rgb(241, 124, 124);
+       font-size: 22px;
+       font-weight: 600;
+       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #nav{
+        width: 40%;
+    }
+    #nav>ul{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 10px;
+    }
+    #nav>ul>li{
+        list-style: none;
+        
+    }
+    #nav>ul>li:hover{
+        cursor: pointer;
+        color:white;
+    }
+    #logo{
+        margin-left: 10px;
+    }
+    .logoSpan{
+        color: white;
+        margin-right: -4px;
+        font-size: 26px;
+    }
+    #navShort{
+        margin-right: 10px;
+        display: none;
+    }
+    #navShort>i{
+       color: white;
+    }
+    #navShort:hover{
+      cursor: pointer;
+    }
+    /* -------------------------------sidebar---------------------------- */
+    #sidebar{
+        position: absolute;
+        width: 40%;
+        height: 1300px;
+        text-align: center;
+        overflow-y: hidden;
+        background-color:  rgba(0, 0, 0, 0.325);
+        z-index: 100;
+       display: none;
+    }
+    #sidebar>ul{
+        margin-top: 660px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
        
+    }
+    #sidebar>ul>li{
+        color: white;
+        padding-top:20px ;
+        padding-bottom: 30px;
+    }
+    #sidebar>ul>li:hover{
+        cursor: pointer;
+        color:rgb(241, 124, 124);
+    }
+    #cross{
+        color: white;
+        position: absolute;
+        left: 80%;
+     
+    }
+    #sidebar>ul>li:hover{
+        cursor: pointer;
+        color:rgb(241, 124, 124);
+    }
+    /* ------------------------------1st section------------------------------ */
+    #cont1{
+        margin-top: 35px;
+        width: 100%;
+        height: 510px;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    #cont1box2{
+        width: 50%;
+    }
+    #cont1box2>img{
+       width: 100%;
+       height: 100%;
+    }
+    #cont1box1{
+        width: 45%;
+        height: 60%;
+       text-align: center;
+       margin-top: 150px;
+      
+    }
+    #cont1box1>h1{
+        font-size: 32px;
+        color: rgb(241, 124, 124);
+       
+    }
+    #cv{
+        background-color: rgb(241, 124, 124);
+        padding: 8px;
+        color: white;
+       position: absolute;
+       margin-top: -240px;
+       margin-left: -280px;
+       z-index: 10;
+    }
+    #cv>a{
+        text-decoration: none;
+        color: white;
+        font-weight: 800;
+    }
+    /* ---------------------------About------------------------------------- */
+    #about{
+        text-align: center;
+        color: white;
+        margin-top: 40px;
+        margin-bottom: 40px;
+       
+    }
+    #cont2{
+        text-align: center;
+        margin: auto;
+        /* padding: 2%; */
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,46%);
+        
+        gap: 25px;
+    }
+    /* #cont2box1{
+        width: 45%;
+    } */
+    #cont2box1>iframe{
+        width: 100%;
+    }
+    #cont2box2{
+        /* width: 45%; */
+        text-align: left;
+        margin-top: 20px;
+    }
+    #cont2box2>p{
+        width: 100%;
+        color: white;
+        font-size: 22px;
+    }
+    /* --------------------------------------skills----------------------- */
+    #skills{
+        color: white;
+        text-align: center;
+        margin: auto;
+        margin-top: 60px;
+        margin-bottom: 40px;
+        font-size: 24px;
+    }
+    #cont3{
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+    #cont3box1{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap: 100px;
+    }
+    #cont3box11{
+        width: 100%;
+
+    }
+    #cont3box11>img{
+        width: 100%;
+        height: 200px;
+    }
+    /* ---------------------------------projects------------------------------- */
+    #projects{
+        color: white;
+        font-size: 22px;
+        margin-top: 100px;
+        margin-bottom: 30px;
+    }
+    #cont4{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        margin: auto;
+    }
+    #cont4box1{
+        width: 100%;
+        margin: auto;
+    }
+    #cont4box11{
+        width: 100%;
+        margin: auto;
+    }
+    #cont4box11>img{
+        width: 98%;
+        height: 400px;
+    }
+    #cont4box12{
+        width: 100%;
+        color: white;
+        text-align: left;
+    }
+    #links>a{
+        /* text-decoration: none; */
+        color:rgb(241, 124, 124);
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding: 6px;
+        font-size: 18px;
+    }
+    /* ------------------------------------github------------------------- */
+    #gitCalender{
+       
+        width: 80vw;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    #github{
+        margin-top: 50px;
+        font-size: 18px;
+        color: white;
+    }
+    /* ----------------------------------Contacts--------------------------- */
+    #cont5{
+        width: 100%;
+        height: 100px;
+        background-color:rgb(48, 45, 45);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    #cont5box1{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+       
+    }
+    #cont5box1>a{
+        color:rgb(241, 124, 124);
+        font-size: 18px;
+    }
+    /* ----------------------------authority----------------------------- */
+    #authority{
+        background-color: rgb(48, 45, 45);
+        margin-top: -10px;
+    }
+    #authority>p{
+        color: rgb(241, 124, 124);
+        margin-bottom: 5px;
+       
+    }
+    #authority>p>img{
+        width: 18px;
+    }
+    /* ------------------------------------medium screen-------------------- */
+    @media screen and (max-width: 732px) {
+        #nav{
+        width: 70%;
+    }
+    #nav>ul{
+       margin-right: 30px;
+       font-weight: 200;
+    }
+    /* -------------------------1st section------------------------ */
+    #cont1{
+        width: 100%;
+        height: 510px;
+    }
+    #cont1box2{
+        width: 50%;
+    }
+    #cont1box2>img{
+       width: 100%;
+       height: 100%;
+    }
+    #cont1box1{
+        width: 45%;
+        height: 60%;
+    }
+    #cont1box1>h1{
+        font-size: 24px;
+        color: rgb(241, 124, 124);
+       
+    }
+    /* --------------------------------About-------------------------------- */
+    #cont2{
+        /* padding: 2%; */
+        display: grid;
+        grid-template-columns: repeat(1,96%);
+        gap: 20px;
+    }
+    #cont2box2>p{
+        font-size: 20px;
+    }
+    /* ----------------------------skills---------------------------------- */
+    #cont3box1{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3,1fr);
+        gap: 50px;
+    }
+    }
+    /* --------------------------------small size------------------------------ */
+    @media screen and (max-width: 432px) {
+        #cont4{
+            width: 100vw;
+            overflow-x:hidden;
+        }
+        #cont1{
+            width: 100vw;
+            overflow-x:hidden;
+        }
+        #cont2{
+            width: 100vw;
+            overflow-x:hidden;
+        }
+        #cont3{
+            width: 100vw;
+            overflow-x:hidden;
+        }
+        #cont5{
+            width: 100vw;
+            overflow-x:hidden;
+        }
+        #navbar{
+            
+        }
+        #nav{
+       display: none;
+    }
+    #navShort{
+        display: block;
+    }
+    /* --------------------------1st section------------------------------- */
+    #cv{
+        margin-left: -160px;
+    }
+    #cont1{
+        margin-bottom: 80px;
+    }
+    #cont1box2>img{
+        margin-top: 60px;
+    }
+    #cont1box1{
+        margin-left: 5px;
+    }
+    #cont1box1>h1{
+        font-size: 18px;
+        text-align: left;
+    }
+    
+/* -------------------------------About----------------------------------- */
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+#about{
+    margin-bottom: 5px;
+}
+#cont2{
+        /* padding: 5%; */
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,95%);
+        gap: 10px;
+    }
+    #cont2box1{
+        width: 100%;
+    }
+    #cont2box1>iframe{
+        width: 100%;
+    }
+    #cont2box2>p{
+        font-size: 20px;
+    }
+    /*-----------------------------skills----------------------------------  */
+    #cont3box1{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4,1fr);
+        gap: 50px;
+    }
+    /* -------------------------------------Projects-------------------- */
+    #cont4{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap: 50px;
+        margin: auto;
+    }
+    /* -------------------------------github------------------------------- */
+    #gitCalender{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    #stats{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    /* -------------------------------contacts--------------------------- */
+    #cont5box1>a{
+        color:rgb(241, 124, 124);
+        font-size: 14px;
+    }
+    }
+</style>
+<body>
+    <div id="navbar">
+        
+        <div id="logo">
+         <p> <span class="logoSpan">Port</span> folio </p>
+        </div>
+
+        <div id="nav">
+            <ul>
+                <li class="home" onclick="homeFun()">Home</li>
+                <li class="about" onclick="aboutFun()">About</li>
+                <li class="skills" onclick="skillsFun()">Skills</li>
+                <li class="projects" onclick="projectsFun()">Projects</li>
+                <li class="contact" onclick="contactFun()">Contact</li>
+                <li class="resume" onclick="resumeFun()">Resume</li>
+            </ul>
+        </div>
+
+        <div id="navShort"><i class="fa-solid fa-bars"></i></div>
+
+        <div id="sidebar">
+          
+            <ul>
+                <div id="cross"><i class="fa-solid fa-xmark"></i></div>
+                <li class="home" onclick="homeFun()">Home</li>
+                <li class="about" onclick="aboutFun()">About</li>
+                <li class="skills" onclick="skillsFun()">Skills</li>
+                <li class="projects" onclick="projectsFun()">Projects</li>
+                <li class="contact" onclick="contactFun()">Contact</li>
+                <li class="resume" onclick="resumeFun()">Resume</li>
+            </ul>
+        </div>
+
     </div>
-
-    <div id="skill" data-aos="fade-left">
-      <h2>Skill</h2>
-      <div class="skill">
-        <div>
-          <img src="./Image/ux.png" />
-          <p>Frontend</p>
-        </div>
-        <div>
-          <img src="./Image/backend.png" />
-          <p>Backend</p>
-        </div>
-        <div>
-          <img src="./Image/sitemap.png" />
-          <p>Data Structure & Algorithms</p>
-        </div>
-        <div>
-          <img src="https://cdn-icons-png.flaticon.com/512/8121/8121714.png" />
-          <p>Soft Skills</p>
-        </div>
-      </div>
+<!-- -------------------------------------1st section---------------------- -->
+<div id="cont1" class="cont">
+    <div id="cont1box1" data-aos="fade-right">
+        <h1 >Hi, This is Priyanka Dhar</h1>
+        <h1>Java backend developer</h1>
     </div>
-
-    <div id="project">
-      <h2>Projects</h2>
-      <div id="allProject">
-        <div class="projectCard" data-aos="fade-right">
-          <img src="./Image/bluemercury.png" />
-          <div class="projectDetail">
-            <p>
-              A Clone of E-commerce Site "bluemercury.com"
-            </p>
-            <p>Features : <ol>Import and export header, footer including animation to all pages and handled the product details page.</ol>
-            </p>
-            <p>Tech Stack: HTML 5, CSS 3, JavaScript, API, JSON</p>
-            <button value="blue">Github</button>
-            <button value="blue">Live</button>
-          </div>
-        </div>
-
-        <div class="projectCard" data-aos="fade-left">
-          <img src="./Image/jiomart.jpeg" />
-          <div class="projectDetail">
-            <p>
-              An e-commerce site for FMCG products
-            </p>
-            <p>Features :
-            <ol>ROLE: Implemented the back-end and created RestAPIs.</ol>
-            </p>
-            <p>Tech Stack: HTML 5, CSS 3, JavaScript</p>
-            <button value="jiomart">Github</button>
-            <button value="jiomart">Live</button>
-          </div>
-        </div>
-
-        <div class="projectCard" data-aos="fade-right">
-          <img src="./Image/jiomart.jpeg" />
-          <div class="projectDetail">
-            <p>
-              An e-commerce site for FMCG products
-            </p>
-            <p>Features :
-            <ol>ROLE: Implemented the back-end and created RestAPIs.</ol>
-            </p>
-            <p>Tech Stack: HTML 5, CSS 3, JavaScript</p>
-            <button value="jiomart">Github</button>
-            <button value="jiomart">Live</button>
-          </div>
-        </div>
-
-        <div class="projectCard" data-aos="fade-left">
-          <img src="./Image/jiomart.jpeg" />
-          <div class="projectDetail">
-            <p>
-              An e-commerce site for FMCG products
-            </p>
-            <p>Features :
-            <ol>ROLE: Implemented the back-end and created RestAPIs.</ol>
-            </p>
-            <p>Tech Stack: HTML 5, CSS 3, JavaScript</p>
-            <button value="jiomart">Github</button>
-            <button value="jiomart">Live</button>
-          </div>
-        </div>
-
-        <div class="projectCard" data-aos="fade-right">
-          <img src="./Image/jiomart.jpeg" />
-          <div class="projectDetail">
-            <p>
-              An e-commerce site for FMCG products
-            </p>
-            <p>Features :
-            <ol>ROLE: Implemented the back-end and created RestAPIs.</ol>
-            </p>
-            <p>Tech Stack: HTML 5, CSS 3, JavaScript</p>
-            <button value="jiomart">Github</button>
-            <button value="jiomart">Live</button>
-          </div>
-        </div>
-
-        <div class="projectCard" data-aos="fade-left">
-          <img src="./Image/jiomart.jpeg" />
-          <div class="projectDetail">
-            <p>
-              An e-commerce site for FMCG products
-            </p>
-            <p>Features :
-            <ol>ROLE: Implemented the back-end and created RestAPIs.</ol>
-            </p>
-            <p>Tech Stack: HTML 5, CSS 3, JavaScript</p>
-            <button value="jiomart">Github</button>
-            <button value="jiomart">Live</button>
-          </div>
-        </div>
-      </div>
+    <div id="cont1box2" data-aos="fade-left">
+        <img src="./profile photo-removebg-preview.jpg" alt="" >
     </div>
-
-    <div id="stats">
-      <h2>Skill Stats</h2>
-      <div class="statCard">
-        <img
-          src="https://camo.githubusercontent.com/dea7f63ba2dbf901b7ad9403adf6be5af08b810335d7b1afbbce566793bd7b87/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d70726979616e6b61343235312673686f775f69636f6e733d74727565266c6f63616c653d656e"
-        />
-      </div>
-
-      <div class="statCard">
-        <img
-          src="https://camo.githubusercontent.com/28932c6ea77660afe06ccc37584a6c732546e33d26c472c5c92af2bf18215c88/68747470733a2f2f6769746875622d726561646d652d73747265616b2d73746174732e6865726f6b756170702e636f6d2f3f757365723d70726979616e6b613432353126"
-        />
-      </div>
-
-      <!-- <div class="statCard">
-        <img
-          src="https://github-profile-trophy.vercel.app/?username=ujjwalpaul005&theme=radical&margin-w=15&margin-h=15&row=1"
-        />
-      </div> -->
+</div>
+<button id="cv"><a href="https://drive.google.com/file/d/17YrTYHdv9_mxMqixKqWzT5Y1O0og3UpT/view?usp=sharing">  Download CV </a></button>
+<!-- ------------------------------About------------------------------------ -->
+              <div id="about"><h2>About Me</h2></div>
+<div id="cont2" class="cont">
+    <div id="cont2box1" data-aos="fade-left">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/lz2efPEZEoU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-
-    <div id="gitCalender">
-      <h2>Github Calender</h2>
-      <div class="calendar">
-        <!-- Loading stuff -->
-        Loading the data just for you.
-      </div>
-    </div>
-
-    <div id="contact">
-      <h2>Contact Me</h2>
-      <div class="contactCard">
-        <h4>You Can find me here</h4>
-        <button>LinkedIn</button>
-        <button>GitHub</button>
-        <p>
-          Email:
-          <span
-            ><a href="mailto:pdhar4251@gmail.com"
-              >pdhar4251@gmail.com</a
-            ></span
-          >
+    <div id="cont2box2" data-aos="fade-right">
+        <p>Hi, I am Priyanka Dhar. I belong to Bengal, and currently, I’m staying in Delhi. Talking about my education, I have completed my graduation from Asansol Engineering College in Instrumentation Engineering. From my college days, I developed a keen interest in solving problems in an arranged manner and coding allows me to do so from that time I wanted to code and end up with joining Masai in April 2022 gained knowledge, skills, and experience in making projects individually and within a team as well. Now want to be part of a company’s growth with my all skills, knowledge, and experience which I have gained till now. 
         </p>
-        <p>
-          Phone: <span><a href="tel:+918103088300">+91 8103088300</a></span>
-        </p>
-      </div>
+    </div>
+</div>
+<!-- -----------------------------------Skills--------------------------- -->
+
+<div id="skills">
+    <h2>Skills</h2>
+</div>
+<div id="cont3" class="cont">
+    <div id="cont3box1">
+        <div id="cont3box11" data-aos="fade-right">
+            <img src="https://e7.pngegg.com/pngimages/840/443/png-clipart-html-5-logo-web-development-html-css3-canvas-element-web-design-w3c-html5-logo-miscellaneous-text-thumbnail.png" alt="">
+        </div>
+        <div id="cont3box11" data-aos="fade-right">
+            <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png" alt="">
+        </div>
+        <div id="cont3box11" data-aos="fade-right">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" alt="">
+        </div>
+        <div id="cont3box11" data-aos="fade-right">
+            <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/git-logo.png" alt="">
+        </div>
+        <div id="cont3box11" data-aos="fade-left">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0W4i7PuN62eaTT7Z24CjF5pFtTtBEN_lu2A&usqp=CAU" alt="">
+        </div>
+        <div id="cont3box11" data-aos="fade-left">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/1200px-Java_programming_language_logo.svg.png" alt="">
+        </div>
+        <div id="cont3box11" data-aos="fade-left">
+            <img src="https://banner2.cleanpng.com/20180713/otv/kisspng-spring-framework-software-framework-modelview-pepper-robot-5b48c128f2f1c1.7505867115314946969951.jpg" alt="">
+        </div>
+        <div id="cont3box11" data-aos="fade-left">
+            <img src="https://cdn-images-1.medium.com/fit/c/300/300/1*P8CfLG3rsh4OTHXE8qaITg.png" alt="">
+        </div>
+    </div>
+</div>
+<!-- ----------------------------projects---------------------------------- -->
+<div id="projects">
+    <h2>Projects</h2>
+</div>
+<div id="cont4" class="cont">
+    <div id="cont4box1" data-aos="fade-left">
+       <div id="cont4box11">
+        <img src="./bluemercury.jpeg" alt="">
+       </div>
+       <div id="cont4box12">
+        <h2>Bluemercury Clone</h2>
+        <p>An e-commerce site for beauty products</p>
+        <p>TECH-STACK USED: HTML, CSS, JS, Json server</p>
+        <p>ROLE: Import and export header, footer including animation to all
+            pages and handled the product details page.</p>
+         <div id="links">
+            <a href="https://github.com/ujjwalpaul005/materialistic-knife-835">Git hub</a>
+            <a href="https://candid-jalebi-5c594f.netlify.app/">App</a>
+            <a href="https://drive.google.com/file/d/1sb82ka-q5hiFsQV0F8u4EX46YxFLEKn_/view?usp=sharing">Presentation</a>
+         </div>   
+       </div>
     </div>
 
-    <div id="footer"></div>
-    <script type="module" src="./script/index.js"></script>
-  </body>
+    <div id="cont4box1" data-aos="fade-right">
+        <div id="cont4box11">
+            <img src="./jiomart.jpeg" alt="">
+           </div>
+           <div id="cont4box12">
+            <h2>Jio Mart Clone</h2>
+            <p>An e-commerce site for FMCG products</p>
+            <p>TECH-STACK USED: HTML, CSS, JS, Json server</p>
+            <p>ROLE: Implemented the back-end and created RestAPIs.</p>
+            <div id="links">
+                <a href="https://github.com/atalkrpandey/-thoughtful-advertisement-6741">Git hub</a>
+                <a href="https://jolly-beignet-298a1b.netlify.app">App</a>
+                <a href="https://drive.google.com/file/d/19D-9WFP6xd9K2i35YHOao8pyyu-I40K-/view?usp=sharing">Presentation</a>
+             </div>   
+           </div>
+    </div>
+    
+</div>
+<!-- ------------------------------github------------------------------ -->
+<div id="github">
+    <h2>Github Details</h2>
+</div>
+<div id="gitCalender">
+    <h2>Github Calender</h2>
+    <div class="calendar">
+      <!-- Loading stuff -->
+      Loading the data just for you.
+    </div>
+  </div>
 
-  <script src="./script/comp.js"></script>
+  <div id="stats">
+    <h2>Skill Stats</h2>
+    <div class="statCard">
+      <img
+        src="https://camo.githubusercontent.com/dea7f63ba2dbf901b7ad9403adf6be5af08b810335d7b1afbbce566793bd7b87/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d70726979616e6b61343235312673686f775f69636f6e733d74727565266c6f63616c653d656e"
+      />
+    </div>
 
-  <!-- Include the library. -->
-  <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+    <div class="statCard">
+      <img
+        src="https://camo.githubusercontent.com/28932c6ea77660afe06ccc37584a6c732546e33d26c472c5c92af2bf18215c88/68747470733a2f2f6769746875622d726561646d652d73747265616b2d73746174732e6865726f6b756170702e636f6d2f3f757365723d70726979616e6b613432353126"
+      />
+    </div>
+<!-- -------------------------------Contacts------------------------------- -->
+<div id="contacts">
+    <h2>Contacts</h2>
+</div>
+<div id="cont5" class="cont">
+   <div id="cont5box1">
+    <a href="https://www.linkedin.com/in/priyanka-dhar89/">
+        <i class="fa-brands fa-linkedin"></i> Linkedin
+    </a>
+    <a href="mailto: pdhar4251@gmail.com">
+        <i class="fa-sharp fa-solid fa-envelope"></i>Gmail
+    </a>
+    <a href="https://github.com/Priyanka4251">
+        <i class="fa-brands fa-github"></i> Github
+    </a>
+    <a href="">
+        <i class="fa-solid fa-phone"></i> +91 8103088300
+    </a>
+   </div>
+</div>
+<!-- ------------------------------------------------ -->
+<div id="authority">
+    <p>Created from scratch with <img src="./Image/heart.png"></p>
+    <p>© Copyright 2022</p>
+    <p>All Right Reserved</p>
+</div>
+</body>
+<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
 
   <script>
     GitHubCalendar(".calendar", "Priyanka4251", { responsive: true });
   </script>
 </html>
+
+<script>
+    let ham=document.querySelector(".fa-bars");
+    ham.addEventListener("click",function(){
+        document.getElementById("sidebar").style.display="block";
+       
+    })
+    let cross=document.querySelector(".fa-xmark");
+    cross.addEventListener("click",function(){
+        document.getElementById("sidebar").style.display="none";
+      
+    })
+    // ---------------------------scroll---------------------------------------//
+   let home=document.getElementById("cont1");
+   let about=document.getElementById("cont2");
+   let skills=document.getElementById("cont3");
+   let projects=document.getElementById("cont4");
+   let contact=document.getElementById("cont5");
+
+   function homeFun(){
+    home.scrollIntoView({behavior:'smooth'});
+    document.getElementById("sidebar").style.display="none";
+   }
+
+   function aboutFun(){
+    about.scrollIntoView({behavior:'smooth'});
+    document.getElementById("sidebar").style.display="none";
+   }
+
+   function contactFun(){
+    contact.scrollIntoView({behavior:'smooth'});
+    document.getElementById("sidebar").style.display="none";
+   }
+
+   function skillsFun(){
+    skills.scrollIntoView({behavior:'smooth'});
+    document.getElementById("sidebar").style.display="none";
+   }
+
+   function projectsFun(){
+    projects.scrollIntoView({behavior:'smooth'});
+    document.getElementById("sidebar").style.display="none";
+   }
+  function resumeFun(){
+    window.open("https://drive.google.com/file/d/17YrTYHdv9_mxMqixKqWzT5Y1O0og3UpT/view?usp=sharing");
+    document.getElementById("sidebar").style.display="none";
+  }
+</script>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
@@ -290,31 +703,4 @@
       offset:300,
       duration:1000,
     });
-  </script>
-
-  <script>
-    let about=document.getElementById("about");
-    let project=document.getElementById("project");
-    let techStack=document.getElementById("techStack");
-    let contact=document.getElementById("contact");
-
-   function aboutFun(){
-       about.scrollIntoView({behavior:'smooth'});
-      //  document.getElementById("menu").style.display="none";
-      }
-   function projectFun(){
-       project.scrollIntoView({behavior:'smooth'});
-      //  document.getElementById("menu").style.display="none";
-      }
-
-      function contactFun(){
-       contact.scrollIntoView({behavior:'smooth'});
-      //  document.getElementById("menu").style.display="none";
-      }
-
-      function techStackFun(){
-       techStack.scrollIntoView({behavior:'smooth'});
-      //  document.getElementById("menu").style.display="none";
-      }
-      
   </script>

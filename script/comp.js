@@ -13,7 +13,8 @@ let navbar = () =>{
         <div id="link">
             <div id="aboutNav" onclick="aboutFun()"><span> </span>About</div>
             <div id="projectNav" onclick="projectFun()"><span> </span>Projects</div>
-            <div id="techstackNav" onclick="techStackFun()"><span> </span>Skill</div>
+            <div id="techstackNav" onclick="techStackFun()"><span> </span>Tech Stack</div>
+            <div id="skillNav" onclick="skillFun()"><span> </span>Skill</div>
             <div id="contactNav" onclick="contactFun()"><span> </span>Contact</div>
         </div>
         <button>Resume</button>
