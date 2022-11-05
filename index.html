@@ -12,10 +12,13 @@
     rel="stylesheet"
     href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
     />
+    
 </head>
 <style>
-    /*color: rgb(241, 124, 124); */
+    /*color: rgb(242, 103, 103);; */
     /* rgb(48, 45, 45); */
+    @import url('https://fonts.googleapis.com/css2?family=Nabla&family=Ubuntu:ital,wght@0,300;0,400;1,400&display=swap');
+
     *{
         margin: 0;
         padding: 0;
@@ -23,7 +26,9 @@
     body{
         width: 100%;
         overflow-x: hidden;
-        background-color:  black;
+        /* background-color: black; */
+        background-color: #000000;
+        /* background-image:url("/bg2.jpeg"); */
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         text-align: center;
         margin: auto;
@@ -32,15 +37,17 @@
         width: 100%;
         height: 60px;
         background-color: rgb(48, 45, 45);
+        /* background-color: transparent; */
         position: sticky;
         top: 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: rgb(241, 124, 124);
+        color: rgb(242, 103, 103);
        font-size: 22px;
        font-weight: 600;
        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      
     }
     #nav{
         width: 40%;
@@ -98,10 +105,11 @@
         color: white;
         padding-top:20px ;
         padding-bottom: 30px;
+       
     }
     #sidebar>ul>li:hover{
         cursor: pointer;
-        color:rgb(241, 124, 124);
+        color:rgb(242, 103, 103);;
     }
     #cross{
         color: white;
@@ -111,7 +119,7 @@
     }
     #sidebar>ul>li:hover{
         cursor: pointer;
-        color:rgb(241, 124, 124);
+        color:rgb(242, 103, 103);;
     }
     /* ------------------------------1st section------------------------------ */
     #cont1{
@@ -124,10 +132,16 @@
     }
     #cont1box2{
         width: 50%;
+       
     }
     #cont1box2>img{
-       width: 100%;
-       height: 100%;
+        background-color: aliceblue;
+       width: 50%;
+       height: 70%;
+       border: 2px solid rgb(242, 103, 103);
+       border-radius: 80%;
+       margin-top: 10%;
+
     }
     #cont1box1{
         width: 45%;
@@ -138,17 +152,20 @@
     }
     #cont1box1>h1{
         font-size: 32px;
-        color: rgb(241, 124, 124);
+        color: rgb(242, 103, 103);;
        
     }
+    #typing{
+   font-family: nabla;
+}
     #cv{
-        background-color: rgb(241, 124, 124);
+        background-color: rgb(242, 103, 103);;
         padding: 8px;
         color: white;
        position: absolute;
        margin-top: -240px;
        margin-left: -280px;
-       z-index: 10;
+      
     }
     #cv>a{
         text-decoration: none;
@@ -158,10 +175,10 @@
     /* ---------------------------About------------------------------------- */
     #about{
         text-align: center;
+        margin: auto;
         color: white;
         margin-top: 40px;
         margin-bottom: 40px;
-       
     }
     #cont2{
         text-align: center;
@@ -179,10 +196,19 @@
     #cont2box1>iframe{
         width: 100%;
     }
+    #cont2box1{
+        background-color: rgba(170, 160, 160, 0.323);
+        padding: 8px;
+        border-radius: 20px;
+        margin: auto;
+    }
     #cont2box2{
         /* width: 45%; */
         text-align: left;
         margin-top: 20px;
+        background-color: rgba(170, 160, 160, 0.323);
+        padding: 8px;
+        border-radius: 20px;
     }
     #cont2box2>p{
         width: 100%;
@@ -205,7 +231,7 @@
         margin-bottom: 40px;
     }
     #cont3box1{
-        width: 90%;
+        width: 70%;
         margin: auto;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -219,6 +245,7 @@
     #cont3box11>img{
         width: 100%;
         height: 200px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
     /* ---------------------------------projects------------------------------- */
     #projects{
@@ -233,10 +260,15 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
         margin: auto;
+      
     }
     #cont4box1{
-        width: 100%;
+        width: 80%;
         margin: auto;
+        background-color: rgba(170, 160, 160, 0.323);
+        padding: 8px;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
     #cont4box11{
         width: 100%;
@@ -245,6 +277,7 @@
     #cont4box11>img{
         width: 98%;
         height: 400px;
+        
     }
     #cont4box12{
         width: 100%;
@@ -253,10 +286,12 @@
     }
     #links>a{
         /* text-decoration: none; */
-        color:rgb(241, 124, 124);
+        color:rgb(242, 103, 103);;
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         padding: 6px;
         font-size: 18px;
+       
+       
     }
     /* ------------------------------------github------------------------- */
     #gitCalender{
@@ -271,6 +306,9 @@
         font-size: 18px;
         color: white;
     }
+    #statCard{
+        width: 80vw;
+    }
     /* ----------------------------------Contacts--------------------------- */
     #cont5{
         width: 100%;
@@ -279,6 +317,7 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
+       
     }
     #cont5box1{
         width: 100%;
@@ -287,26 +326,50 @@
        
     }
     #cont5box1>a{
-        color:rgb(241, 124, 124);
+        color:rgb(242, 103, 103);;
         font-size: 18px;
     }
     /* ----------------------------authority----------------------------- */
     #authority{
         background-color: rgb(48, 45, 45);
         margin-top: -10px;
+       
     }
     #authority>p{
-        color: rgb(241, 124, 124);
+        color: rgb(242, 103, 103);;
         margin-bottom: 5px;
        
     }
     #authority>p>img{
         width: 18px;
     }
+    /* ----------------------------------bird-------------------------------- */
+    #bird{
+        position: fixed;
+        top: 50px;
+        width: 100vw;
+        height: 100vh;
+        display: none;
+    }
+    #bird>img{
+        width: 100%;
+        height: 100%;
+    }
+    #bird2{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        display: none;
+    }
+    #bird2>img{
+        width: 100%;
+        height: 100%;
+    }
     /* ------------------------------------medium screen-------------------- */
     @media screen and (max-width: 732px) {
         #nav{
         width: 70%;
+        font-size: 16px;
     }
     #nav>ul{
        margin-right: 30px;
@@ -321,8 +384,8 @@
         width: 50%;
     }
     #cont1box2>img{
-       width: 100%;
-       height: 100%;
+       width: 90%;
+       height: 60%;
     }
     #cont1box1{
         width: 45%;
@@ -330,7 +393,7 @@
     }
     #cont1box1>h1{
         font-size: 24px;
-        color: rgb(241, 124, 124);
+        color: rgb(242, 103, 103);;
        
     }
     /* --------------------------------About-------------------------------- */
@@ -345,13 +408,19 @@
     }
     /* ----------------------------skills---------------------------------- */
     #cont3box1{
-        width: 90%;
+        width: 70%;
         margin: auto;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3,1fr);
         gap: 50px;
     }
+    /* -----------------------------------project----------------------- */
+    #cont4box1{
+        width: 100%;
+        height: 600px;
+    }
+  
     }
     /* --------------------------------small size------------------------------ */
     @media screen and (max-width: 432px) {
@@ -376,10 +445,11 @@
             overflow-x:hidden;
         }
         #navbar{
-            
+           
         }
         #nav{
        display: none;
+       
     }
     #navShort{
         display: block;
@@ -444,23 +514,33 @@ body{
         gap: 50px;
         margin: auto;
     }
+   
     /* -------------------------------github------------------------------- */
     #gitCalender{
-        width: 100vw;
+        width: 80vw;
         overflow-x: hidden;
+    }
+    #statCard{
+        width: 80vw;
+    }
+    #statCard>img{
+        width: 100%;
     }
     #stats{
-        width: 100vw;
+        /* margin: auto;
+        width: 80vw; */
         overflow-x: hidden;
     }
+
     /* -------------------------------contacts--------------------------- */
     #cont5box1>a{
-        color:rgb(241, 124, 124);
+        color:rgb(242, 103, 103);;
         font-size: 14px;
     }
     }
 </style>
 <body>
+
     <div id="navbar">
         
         <div id="logo">
@@ -494,14 +574,20 @@ body{
         </div>
 
     </div>
+    <!-- --------------------------bird-------------------------------- -->
+    <div id="bird"><img src="./bird-blue.gif" alt=""></div>
+
+    <!-- <div id="bird2"><img src="./bird-white.gif" alt=""></div> -->
 <!-- -------------------------------------1st section---------------------- -->
 <div id="cont1" class="cont">
     <div id="cont1box1" data-aos="fade-right">
         <h1 >Hi, This is Priyanka Dhar</h1>
-        <h1>Java backend developer</h1>
+        <h1>Java  <span id="typing">backend developer</span> </h1>
+      
+    
     </div>
     <div id="cont1box2" data-aos="fade-left">
-        <img src="./profile photo-removebg-preview.jpg" alt="" >
+        <img src="./profile photo-removebg-preview1.png" alt="" >
     </div>
 </div>
 <button id="cv"><a href="https://drive.google.com/file/d/17YrTYHdv9_mxMqixKqWzT5Y1O0og3UpT/view?usp=sharing">  Download CV </a></button>
@@ -670,31 +756,57 @@ body{
    function homeFun(){
     home.scrollIntoView({behavior:'smooth'});
     document.getElementById("sidebar").style.display="none";
+    myFunction2();
    }
 
    function aboutFun(){
     about.scrollIntoView({behavior:'smooth'});
     document.getElementById("sidebar").style.display="none";
+    myFunction2();
    }
 
    function contactFun(){
     contact.scrollIntoView({behavior:'smooth'});
     document.getElementById("sidebar").style.display="none";
+    myFunction2();
    }
 
    function skillsFun(){
     skills.scrollIntoView({behavior:'smooth'});
     document.getElementById("sidebar").style.display="none";
+    myFunction2();
    }
 
    function projectsFun(){
     projects.scrollIntoView({behavior:'smooth'});
     document.getElementById("sidebar").style.display="none";
+    myFunction2();
    }
   function resumeFun(){
     window.open("https://drive.google.com/file/d/17YrTYHdv9_mxMqixKqWzT5Y1O0og3UpT/view?usp=sharing");
     document.getElementById("sidebar").style.display="none";
   }
+
+  window.load(myFunction());
+
+  function myFunction() {
+    document.getElementById("bird").style.display="block";
+  timeout = setTimeout(birdFunc, 3000);
+}
+
+function birdFunc() {
+ document.getElementById("bird").style.display="none";
+}
+
+function myFunction2(){
+    document.getElementById("bird").style.display="block";
+  timeout = setTimeout(bird2Func, 1000);
+}
+
+function bird2Func() {
+ document.getElementById("bird").style.display="none";
+}
+
 </script>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
