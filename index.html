@@ -90,7 +90,7 @@
         height: 1300px;
         text-align: center;
         overflow-y: hidden;
-        background-color:  rgba(0, 0, 0, 0.325);
+        background-color:  rgb(48, 45, 45);
         z-index: 100;
        display: none;
     }
@@ -162,8 +162,8 @@
         background-color: rgb(242, 103, 103);;
         padding: 8px;
         color: white;
-       position: absolute;
-       margin-top: -240px;
+       position: absolute; 
+        margin-top: -240px;
        margin-left: -280px;
       
     }
@@ -470,7 +470,10 @@
     }
     /* --------------------------1st section------------------------------- */
     #cv{
-        margin-left: -160px;
+        position: relative;
+        margin-left: -15px;
+        
+
     }
     #cont1{
         margin-bottom: 80px;
@@ -790,13 +793,16 @@ body{
     let ham=document.querySelector(".fa-bars");
     ham.addEventListener("click",function(){
         document.getElementById("sidebar").style.display="block";
+        // document.getElementById("cv").style.display="none";
        
     })
     let cross=document.querySelector(".fa-xmark");
     cross.addEventListener("click",function(){
         document.getElementById("sidebar").style.display="none";
-      
+       
+    //    document.getElementById("cv").style.display="block";
     })
+   
     // ---------------------------scroll---------------------------------------//
    let home=document.getElementById("cont1");
    let about=document.getElementById("cont2");
