@@ -10,8 +10,8 @@
     <title>Portfolio</title>
     <link
     rel="stylesheet"
-    href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
-    />
+    href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+
     
 </head>
 <style>
@@ -338,7 +338,7 @@
        
     }
     #cont5box1>a{
-        color:rgb(242, 103, 103);;
+        color:rgb(242, 103, 103);
         font-size: 18px;
     }
     /* ----------------------------authority----------------------------- */
@@ -573,7 +573,18 @@ body{
                 <li class="skills" onclick="skillsFun()">Skills</li>
                 <li class="projects" onclick="projectsFun()">Projects</li>
                 <li class="contact" onclick="contactFun()">Contact</li>
-                <li class="resume" onclick="resumeFun()">Resume</li>
+                <li class="resume" onclick="resumeFun()">
+                    
+                    <a style="color: rgb(242, 103, 103); text-decoration: none;"
+                onclick="window.open('https://drive.google.com/file/d/17YrTYHdv9_mxMqixKqWzT5Y1O0og3UpT/view?usp=sharing','_blank')"
+               
+                href="images/Chandra-Prakash-Dhaker-Resume.pdf"
+                download="Priyanka-Dhar-Resume"
+                title="download"
+                >Resume</a
+              >
+                    <!-- Resume -->
+                </li>
             </ul>
         </div>
 
@@ -609,7 +620,7 @@ body{
         <img src="./profile photo-removebg-preview1.png" alt="" >
     </div>
 </div>
-<button id="cv"><a href="https://drive.google.com/file/d/17YrTYHdv9_mxMqixKqWzT5Y1O0og3UpT/view?usp=sharing">  Download CV </a></button>
+<button download id="cv"><a href="Priyanka_Dhar_Resume.pdf" download>  Download CV </a></button>
 <!-- ------------------------------About------------------------------------ -->
               <div id="about"><h2>About Me</h2></div>
 <div id="cont2" class="cont">
