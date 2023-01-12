@@ -23,6 +23,10 @@
         margin: 0;
         padding: 0;
     }
+    a:hover{
+        cursor: pointer;
+        border-bottom: 2px solid rgb(242, 103, 103);
+    }
     body{
         width: 100%;
         overflow-x: hidden;
@@ -689,8 +693,12 @@ body{
         <p>ROLE: Import and export header, footer including animation to all
             pages and handled the product details page.</p>
          <div id="links">
-            <a href="https://github.com/ujjwalpaul005/materialistic-knife-835">Git hub</a>
-            <a href="https://cerulean-brioche-712e23.netlify.app/">App</a>
+            <a  onclick="window.open('https://github.com/ujjwalpaul005/materialistic-knife-835')" 
+            
+           >Git hub</a>
+            <a 
+            onclick="window.open('https://github.com/ujjwalpaul005/materialistic-knife-835')" 
+           >App</a>
             <!-- <a href="https://drive.google.com/file/d/1sb82ka-q5hiFsQV0F8u4EX46YxFLEKn_/view?usp=sharing">Presentation</a> -->
          </div>   
        </div>
@@ -706,8 +714,10 @@ body{
             <p>TECH-STACK USED: HTML, CSS, JS, Json server</p>
             <p>ROLE: Implemented the back-end and created RestAPIs.</p>
             <div id="links">
-                <a href="https://github.com/atalkrpandey/-thoughtful-advertisement-6741">Git hub</a>
-                <a href="https://jolly-beignet-298a1b.netlify.app">App</a>
+                <a onclick="window.open('https://github.com/atalkrpandey/-thoughtful-advertisement-6741')" >Git hub</a>
+                <a onclick="window.open('https://jolly-beignet-298a1b.netlify.app')"
+                
+                >App</a>
                 <!-- <a href="https://drive.google.com/file/d/19D-9WFP6xd9K2i35YHOao8pyyu-I40K-/view?usp=sharing">Presentation</a> -->
              </div>   
            </div>
@@ -724,8 +734,8 @@ body{
             <p>TECH-STACK USED: HTML, CSS, JS</p>
             <p>ROLE: Individual Project </p>
              <div id="links">
-                <a href="https://github.com/Priyanka4251/snake-game.git">Git hub</a>
-                <a href="https://heroic-queijadas-736293.netlify.app/">App</a>
+                <a onclick="window.open('https://github.com/Priyanka4251/snake-game.git')" >Git hub</a>
+                <a onclick="window.open('https://heroic-queijadas-736293.netlify.app/')">App</a>
                 <!-- <a href="https://drive.google.com/file/d/1sb82ka-q5hiFsQV0F8u4EX46YxFLEKn_/view?usp=sharing">Presentation</a> -->
              </div>   
            </div>
@@ -741,9 +751,9 @@ body{
              <p>TECH-STACK USED: Core java, JDBC, SQL</p>
              <p>ROLE: Individual Project</p>
               <div id="links">
-                 <a href="https://github.com/Priyanka4251/Online-Hardware-and-software-support-system">Git hub</a>
+                 <a onclick="window.open('https://github.com/Priyanka4251/Online-Hardware-and-software-support-system')">Git hub</a>
                  <!-- <a href="https://cerulean-brioche-712e23.netlify.app/">App</a> -->
-                 <a href="https://drive.google.com/file/d/1lFsGsdnWJZDJdNFXXtlC4VKIy2G6gW7r/view?usp=sharing">Presentation</a>
+                 <a onclick="window.open('https://drive.google.com/file/d/1lFsGsdnWJZDJdNFXXtlC4VKIy2G6gW7r/view?usp=sharing')" >Presentation</a>
               </div>   
             </div>
          </div>
@@ -809,6 +819,7 @@ body{
 </html>
 
 <script>
+
     let ham=document.querySelector(".fa-bars");
     ham.addEventListener("click",function(){
         document.getElementById("sidebar").style.display="block";
@@ -863,7 +874,7 @@ body{
     document.getElementById("sidebar").style.display="none";
   }
 
-  window.load(myFunction());
+//   window.load(myFunction());
 
   function myFunction() {
     document.getElementById("bird").style.display="block";
